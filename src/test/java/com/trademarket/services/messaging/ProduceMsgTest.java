@@ -12,7 +12,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.KafkaTemplate;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
@@ -41,5 +44,4 @@ class ProduceMsgTest {
 
          assertEquals(true,produceMsg.publishMessage(tradeRequest));
     }
-
-}
+ }
