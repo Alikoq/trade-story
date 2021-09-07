@@ -6,6 +6,9 @@ import com.trademarket.services.util.MapperUtil;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+import java.util.Hashtable;
+import java.util.Map;
+
 @Service
 public class MessageConsumer {
     public MessagePersistence messagePersist;
@@ -19,4 +22,5 @@ public class MessageConsumer {
             messagePersist.save(tradeRequest);
         }
     }
+
 }

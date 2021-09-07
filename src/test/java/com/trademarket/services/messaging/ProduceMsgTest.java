@@ -32,11 +32,11 @@ class ProduceMsgTest {
         TradeRequest tradeRequest = new TradeRequest();
         tradeRequest.setAccountId("Acc_1");
         tradeRequest.setTradeId(123L);
-        tradeRequest.setCreDate(DateParserUtil.parseStr("11.12.2021"));
-        tradeRequest.setExpireDate(DateParserUtil.parseStr("12.01.2022"));
+        tradeRequest.setCreDate("11.12.2021");
+        tradeRequest.setExpireDate("12.01.2022");
         tradeRequest.setISIN("ISIN2221");
         tradeRequest.setNumbers(111.0);
-        tradeRequest.setSettleDate(DateParserUtil.parseStr("13.01.2022"));
+        tradeRequest.setSettleDate("13.01.2022");
         tradeRequest.setTradeIdVersion(12);
 
          assertEquals(true,produceMsg.publishMessage(tradeRequest));
