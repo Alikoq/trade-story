@@ -2,6 +2,7 @@ package com.trademarket.services.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.trademarket.services.dto.request.TradeRequest;
+import com.trademarket.services.exception.CustomException;
 import com.trademarket.services.util.MapperUtil;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
@@ -17,10 +18,15 @@ public class MessageConsumer {
     }
     @KafkaListener(topics = "topic_1",groupId = "first_gr")
     public void readMessage(String msg) throws JsonProcessingException {
-        if(msg!=null){
-            TradeRequest tradeRequest= MapperUtil.convertToObj(msg);
-            messagePersist.save(tradeRequest);
-        }
+       try {
+           if(msg!=null){
+               TradeRequest tradeRequest= MapperUtil.convertToObj(msg);
+               messagePersist.save(tradeRequest);
+           }
+       }catch (Exception ex){
+           throw new CustomException("Message coldn't readed",500);
+       }
+
     }
 
 }

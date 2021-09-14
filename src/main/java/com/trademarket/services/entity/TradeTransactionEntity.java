@@ -30,6 +30,7 @@ public class TradeTransactionEntity {
     private String isin;
 
     public TradeTransactionEntity() {
+
     }
 
     public TradeTransactionEntity(TradeRequest tradeRequest) {

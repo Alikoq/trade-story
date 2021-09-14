@@ -17,6 +17,8 @@ public class ProduceMsgService {
 
     public boolean publishMessage(TradeRequest tradeRequest){
         String TOPIC_1 = "topic_1";
+        if (tradeRequest.getAccountId().isEmpty())
+            throw new CustomException("acc empty",500);
         try{
             kafkaTemplate.send(TOPIC_1,tradeRequest);
         }catch (Exception e){
