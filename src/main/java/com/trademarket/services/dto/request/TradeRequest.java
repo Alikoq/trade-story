@@ -33,6 +33,7 @@ public class TradeRequest {
     public TradeRequest() {
     }
 
+
     public Long getTradeId() {
         return TradeId;
     }

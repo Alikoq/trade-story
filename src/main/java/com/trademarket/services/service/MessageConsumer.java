@@ -7,13 +7,10 @@ import com.trademarket.services.util.MapperUtil;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-import java.util.Hashtable;
-import java.util.Map;
-
 @Service
 public class MessageConsumer {
-    public MessagePersistence messagePersist;
-    public MessageConsumer(MessagePersistence messagePersist){
+    public MessagePersistenceService messagePersist;
+    public MessageConsumer(MessagePersistenceService messagePersist){
         this.messagePersist = messagePersist;
     }
     @KafkaListener(topics = "topic_1",groupId = "first_gr")

@@ -3,8 +3,8 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/trade1
-    username: trade1
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
     password: trade1
   jpa:
     hibernate:

@@ -1,5 +1,6 @@
 package com.trademarket.services.entity;
 
+
 import com.trademarket.services.dto.request.TradeRequest;
 
 import javax.persistence.*;
@@ -62,5 +63,59 @@ public class TradeTransactionEntity {
         this.tradeIdVersion = tradeIdVersion;
     }
 
+    public String getCreDate() {
+        return creDate;
+    }
 
+    public void setCreDate(String creDate) {
+        this.creDate = creDate;
+    }
+
+    public String getExpireDate() {
+        return expireDate;
+    }
+
+    public void setExpireDate(String expireDate) {
+        this.expireDate = expireDate;
+    }
+
+    public String getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    public String getTradeDate() {
+        return tradeDate;
+    }
+
+    public void setTradeDate(String tradeDate) {
+        this.tradeDate = tradeDate;
+    }
+
+    public String getSettleDate() {
+        return settleDate;
+    }
+
+    public void setSettleDate(String settleDate) {
+        this.settleDate = settleDate;
+    }
+
+    public Double getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(Double numbers) {
+        this.numbers = numbers;
+    }
+
+    public String getIsin() {
+        return isin;
+    }
+
+    public void setIsin(String isin) {
+        this.isin = isin;
+    }
 }

@@ -29,8 +29,7 @@ class ProduceMsgTest {
     @BeforeEach
     void setup(){
          produceMsg=new ProduceMsgService(kafkaTemplate);
-     //   this.kafkaTemplate = new KafkaTemplate<>();
-    }
+     }
     @Test
     @DisplayName("this test method for verifying is msg  published")
     void testProducer(){
@@ -43,7 +42,6 @@ class ProduceMsgTest {
         tradeRequest.setNumbers(111.0);
         tradeRequest.setSettleDate("13.01.2022");
         tradeRequest.setTradeIdVersion(12);
-
         assertTrue(produceMsg.publishMessage(tradeRequest));
     }
 
