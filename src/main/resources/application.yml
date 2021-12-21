@@ -4,17 +4,22 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
+<<<<<<< HEAD
     username: postgres
     password: trade1
+=======
+    username: modular
+    password: modular
+>>>>>>> c736412e3c1b3b995f50b9901af9fab2dcce9cb6
   jpa:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   kafka:
     consumer:
-      bootstrap-servers: localhost:9092
       group-id: "first_gr"
       auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
     # key-deserializer: org.apache.kafka.common.serialization.StringSerializer
     #  value-deserializer: org.apache.kafka.common.serialization.JsonDeserializer
     producer:
